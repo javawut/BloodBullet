@@ -11,7 +11,7 @@ public class HealthController : MonoBehaviour
     public Image healthBar;
 
     public void Update(){
-       UpdateHealthBar()
+        UpdateHealthBar();
     }
     private void UpdateHealthBar()
     {
