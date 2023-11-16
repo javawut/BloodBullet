@@ -140,15 +140,15 @@ public class PlayerController : MonoBehaviour
         localScale.x = scale;
         transform.localScale = localScale;
 
-        Vector2 scaleWeapon = transform.localScale;
-        scaleWeapon.y = scale;
-        weapon.localScale = scaleWeapon;
+        //Vector2 scaleWeapon = transform.localScale;
+        //scaleWeapon.y = scale;
+        //weapon.localScale = scaleWeapon;
     }
 
     public void SetLocalScale(int value)
     {
         Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
+        localScale.x = value;
         transform.localScale = localScale;
     }
     public void SetIsFacingRight(bool value)
