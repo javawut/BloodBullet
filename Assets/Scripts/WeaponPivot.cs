@@ -34,15 +34,24 @@ public class WeaponPivot : MonoBehaviour
         if (direction.x < 0)
         {
             scale.y = -1;
+            //PlayerController.InstanciaPlayerController.FlipSprite(-1);
+            PlayerController.InstanciaPlayerController.SetLocalScale(-1);
+            PlayerController.InstanciaPlayerController.SetIsFacingRight(false);
+
         }
         else
         {
             if (direction.x > 0)
             {
                 scale.y = 1;
+                //PlayerController.InstanciaPlayerController.FlipSprite(1);
+                PlayerController.InstanciaPlayerController.SetLocalScale(1);
+                PlayerController.InstanciaPlayerController.SetIsFacingRight(true);
             }
         }
 
         transform.localScale = scale;
     }
+
+
 }
