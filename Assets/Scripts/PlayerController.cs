@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         GetHorizontalVerticalMove();
         CharacterMoveVertical();
         FlipSprite();
-        //GetAnimations();
+        GetAnimations();
     }
 
     void GetHorizontalVerticalMove()
