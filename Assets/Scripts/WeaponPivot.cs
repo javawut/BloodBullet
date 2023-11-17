@@ -8,8 +8,8 @@ public class WeaponPivot : MonoBehaviour
     public Vector2 PointerPosition { get; set; }
     [SerializeField] private Vector2 pointerPosition;
     private int direction;
-    //[SerializeField] private TMP_Text text1;
-    //[SerializeField] private TMP_Text text2;
+    [SerializeField] private TMP_Text text1;
+    [SerializeField] private TMP_Text text2;
 
     // Update is called once per frame
     void Update()
