@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         GetHorizontalVerticalMove();
         CharacterMoveVertical();
         FlipSprite();
-        //GetAnimations();
+        GetAnimations();
     }
 
     void GetHorizontalVerticalMove()
@@ -132,6 +132,28 @@ public class PlayerController : MonoBehaviour
             scaleWeapon.y *= -1;
             weapon.localScale = scaleWeapon;
         }
+    }
+
+    public void FlipSprite(int scale)
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x = scale;
+        transform.localScale = localScale;
+
+        //Vector2 scaleWeapon = transform.localScale;
+        //scaleWeapon.y = scale;
+        //weapon.localScale = scaleWeapon;
+    }
+
+    public void SetLocalScale(int value)
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x = value;
+        transform.localScale = localScale;
+    }
+    public void SetIsFacingRight(bool value)
+    {
+        isFacingRight = !isFacingRight;
     }
 
     private void FlipSpriteWeapon(Vector2 direction)
