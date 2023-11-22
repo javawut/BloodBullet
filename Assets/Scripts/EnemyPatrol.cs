@@ -17,12 +17,14 @@ public class EnemyPatrol : MonoBehaviour
     private Vector2 startingPosition;
     private bool isFacingRightStart;
     private bool killed = false;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         startingPosition = new Vector2(transform.position.x, transform.position.y);
         isFacingRightStart = isFacingRight;
@@ -41,6 +43,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         EnemyMovement();
         CheckEdgePatrol();
+        GetAnimations();
     }
 
     private void EnemyMovement()
@@ -143,5 +146,9 @@ public class EnemyPatrol : MonoBehaviour
     public void Kill()
     {
         killed = true;
+    }
+    private void GetAnimations()
+    {
+        animator.SetFloat("Speed", currentMoveSpeed);
     }
 }
