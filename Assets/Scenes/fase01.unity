@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2838101669852206858, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.26
+      objectReference: {fileID: 0}
     - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_Name
       value: Mafioso (1)
@@ -564,7 +568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2838101669852206858, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.43
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_Name
@@ -576,11 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.73
+      value: 26.69
       objectReference: {fileID: 0}
     - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.22
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
       propertyPath: m_LocalPosition.z
