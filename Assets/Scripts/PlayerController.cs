@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float verticalMove = 0f;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private bool isRunning = false;
-    [SerializeField] private bool isFacingRight = true;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Checkpoint checkPoint;
@@ -61,7 +60,7 @@ public class PlayerController : MonoBehaviour
         GetSprint();
         GetHorizontalVerticalMove();
         CharacterMoveVertical();
-        FlipSprite();
+        //FlipSprite();
         GetAnimations();
     }
 
@@ -101,38 +100,20 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         return isGrounded;
     }
-    /*
+    
     public void FlipSprite()
     {
-        if ((isFacingRight && horizontalMove < 0.0f) || (!isFacingRight && horizontalMove > 0.0f))
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1;
-            transform.localScale = localScale;
+        Vector3 localScale = transform.localScale;
 
-            Vector3 localScaleWeapon = transform.localScale;
-            localScaleWeapon.y *= -1;
-            weapon.localScale = localScaleWeapon;
-            
+        if (horizontalMove < 0.0f){
+            localScale.x = -1;
+        }else{
+            localScale.x = 1;
         }
-    }
-    */
 
-    public void FlipSprite()
-    {
-        if ((isFacingRight && horizontalMove < 0.0f) || (!isFacingRight && horizontalMove > 0.0f))
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1;
-            transform.localScale = localScale;
-
-            Vector2 scaleWeapon = transform.localScale;
-            scaleWeapon.y *= -1;
-            weapon.localScale = scaleWeapon;
-        }
+        transform.localScale = localScale;
     }
+    
 
     public void FlipSprite(int scale)
     {
@@ -140,9 +121,6 @@ public class PlayerController : MonoBehaviour
         localScale.x = scale;
         transform.localScale = localScale;
 
-        //Vector2 scaleWeapon = transform.localScale;
-        //scaleWeapon.y = scale;
-        //weapon.localScale = scaleWeapon;
     }
 
     public void SetLocalScale(int value)
@@ -150,40 +128,6 @@ public class PlayerController : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x = value;
         transform.localScale = localScale;
-    }
-    public void SetIsFacingRight(bool value)
-    {
-        isFacingRight = !isFacingRight;
-    }
-
-    private void FlipSpriteWeapon(Vector2 direction)
-    {
-        Vector3 localScale = transform.localScale;
-        Vector2 scaleWeapon = transform.localScale;
-        if (direction.x < 0)
-        {
-            isFacingRight = false;
-            scaleWeapon.y = -1;
-            localScale.x = -1;
-        }
-        else
-        {
-            if (direction.x > 0)
-            {
-                isFacingRight = true;
-                scaleWeapon.y = 1;
-                localScale.x = 1;
-            }
-        }
-
-        weapon.localScale = scaleWeapon;
-        transform.localScale = localScale;
-        
-    }
-
-    public bool IsFacingRight()
-    {
-        return isFacingRight;
     }
 
     private void GetSprint()
