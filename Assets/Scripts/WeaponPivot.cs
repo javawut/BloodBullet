@@ -7,7 +7,7 @@ public class WeaponPivot : MonoBehaviour
 {
     public Vector2 PointerPosition { get; set; }
     [SerializeField] private Vector2 pointerPosition;
-    private int direction;
+    private int directionX;
     [SerializeField] private TMP_Text text1;
     [SerializeField] private TMP_Text text2;
 
@@ -31,6 +31,7 @@ public class WeaponPivot : MonoBehaviour
         transform.right = direction;
 
         FlipSpriteWeapon(direction);
+        PlayerController.InstanciaPlayerController.SetLocalScale(directionX);
         
     }
 
@@ -38,10 +39,8 @@ public class WeaponPivot : MonoBehaviour
         Vector2 scale = transform.localScale;
         if (direction.x < 0)
         {
-            
-            PlayerController.InstanciaPlayerController.FlipSprite(-1);
+            directionX = -1;
             PlayerController.InstanciaPlayerController.SetLocalScale(-1);
-            PlayerController.InstanciaPlayerController.SetIsFacingRight(false);
             scale.y = -1;
             scale.x = -1;
 
@@ -50,10 +49,8 @@ public class WeaponPivot : MonoBehaviour
         {
             if (direction.x > 0)
             {
-                
-                PlayerController.InstanciaPlayerController.FlipSprite(1);
+                directionX = 1;
                 PlayerController.InstanciaPlayerController.SetLocalScale(1);
-                PlayerController.InstanciaPlayerController.SetIsFacingRight(true);
                 scale.y = 1;
                 scale.x = 1;
             }
@@ -61,6 +58,5 @@ public class WeaponPivot : MonoBehaviour
 
         transform.localScale = scale;
     }
-
 
 }
