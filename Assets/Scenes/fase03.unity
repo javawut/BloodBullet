@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4a8702763c8db449236783022e4f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontoDestino: {fileID: 2091079763}
+  pontoDestino: {fileID: 131355930}
 --- !u!1 &527667998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &970636636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 1109193147}
   - component: {fileID: 1109193149}
   - component: {fileID: 1109193148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2470,7 +2470,7 @@ GameObject:
   - component: {fileID: 1772675035}
   - component: {fileID: 1772675037}
   - component: {fileID: 1772675036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
