@@ -732,7 +732,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10.306317
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -756,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219461489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 9.03, y: 4.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -839,8 +839,69 @@ Transform:
   m_Children:
   - {fileID: 611837161}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &376815788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101669852206858, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.124889
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &477163795
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,8 +935,65 @@ Transform:
   - {fileID: 187480072}
   - {fileID: 2137366635}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &488561214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.046101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &490444518
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +1103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514232988
 GameObject:
@@ -1329,6 +1447,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &699761877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.124934
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101671286140363, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.41
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &902470140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1730,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &937401304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.195389
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &1478686669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1898,185 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1563769210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.632572
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
+--- !u!1001 &1564444897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101669852206858, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0435953
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
+--- !u!1001 &1572911819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.862482
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101671286140363, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &1650537772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +2365,7 @@ Transform:
   - {fileID: 177937900}
   - {fileID: 1478686670}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098496052
 GameObject:
@@ -2063,6 +2478,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2110863874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838101670048987561, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_Name
+      value: Mafioso (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.828259
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28317708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101670048987566, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838101671286140363, guid: 36b335f776726d3408041972a2019363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.92
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b335f776726d3408041972a2019363, type: 3}
 --- !u!1 &2137366634
 GameObject:
   m_ObjectHideFlags: 0
