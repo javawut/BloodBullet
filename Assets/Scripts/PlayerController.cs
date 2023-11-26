@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
     private GameObject swordCollider;
     private bool isPlayerAttacking = false;
     private SwordAnimation playerSword;
-    private GameObject swordArm;
+    private SpriteRenderer swordArm;
+    private SpriteRenderer swordAxe;
 
 
     [SerializeField] public static GameObject instanciaPlayerController;
@@ -63,7 +64,8 @@ public class PlayerController : MonoBehaviour
         gamePaused = false;
         swordCollider = transform.Find("ArmPivot/SwordCollider").gameObject;
         playerSword = transform.Find("ArmPivot/Arm/Axe").GetComponent<SwordAnimation>();
-        swordArm = transform.Find("ArmPivot/Arm").gameObject;
+        swordArm = transform.Find("ArmPivot/Arm/Arm").GetComponent<SpriteRenderer>();
+        swordAxe = transform.Find("ArmPivot/Arm/Axe").GetComponent<SpriteRenderer>();
         swordCollider.SetActive(false);
     }
 
@@ -240,11 +242,13 @@ public class PlayerController : MonoBehaviour
         while(isPlayerHit && !playerKilled) {
             isEnabled = !isEnabled;
             spriteRenderer.enabled = isEnabled;
-            swordArm.SetActive(isEnabled);
+            swordArm.enabled = isEnabled;
+            swordAxe.enabled = isEnabled;
             yield return new WaitForSeconds(0.02f);
         }
         spriteRenderer.enabled = true;
-        swordArm.SetActive(true);
+        swordArm.enabled = true;
+        swordAxe.enabled = true;
 
     }
 
@@ -256,7 +260,8 @@ public class PlayerController : MonoBehaviour
         playerKilled = true;
         isPlayerHit = true;
         playerCurrentHealth = 0;
-        swordArm.SetActive(false);
+        swordArm.enabled = false;
+        swordAxe.enabled = false;
     }
 
     private void PlayerKilledState() {
@@ -269,7 +274,8 @@ public class PlayerController : MonoBehaviour
         playerKilled = false;
         playerCurrentHealth = playerFullHealth;
         isPlayerHit = false;
-        swordArm.SetActive(true);
+        swordArm.enabled = true;
+        swordAxe.enabled = true;
         healthBar.SetHealth(playerCurrentHealth);
     }
 
@@ -293,8 +299,12 @@ public class PlayerController : MonoBehaviour
                 InitPlayerAttack();
             }
         } else {
-            //Player toma slow enquanto está atacando
-            rb.velocity = new Vector2(rb.velocity.x * playerAttackSlowMultiplier, 0);
+            //Player não pode correr enquanto ataca, então agora ele irá apenas andar
+            if(isRunning) {
+                isRunning = false;
+                rb.velocity = new Vector2(horizontalMove * walkingSpeed, 0);
+            }
+            
         }
     }
 

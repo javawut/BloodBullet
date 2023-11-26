@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class EnemyPatrolSword: Enemy
 {
@@ -248,7 +247,7 @@ public class EnemyPatrolSword: Enemy
     private IEnumerator AttackCoroutine() {
         isAttacking = true;
         //Pausa para atacar
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
         //Ataque com espada
         swordCollider.SetActive(true);
@@ -256,7 +255,7 @@ public class EnemyPatrolSword: Enemy
 
         //Deadframes ataque
         swordCollider.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         //Fim ataque (com cooldown)
         SetPreAttackStats();
