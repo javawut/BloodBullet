@@ -21,7 +21,7 @@ public class EnemyPatrolSword: Enemy
     private bool isFacingRightStart;
     private BoxCollider2D boxCollider;
     private bool isAttacking = false;
-    private float attackRange = 4.0f;
+    private float attackRange = 1.8f;
     private float playerDistance;
     private Vector2 playerPosition;
     private bool isCooldownAttack = false;
