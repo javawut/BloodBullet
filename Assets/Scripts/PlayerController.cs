@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private int playerFullHealth;
     private GameObject swordCollider;
     private bool isPlayerAttacking = false;
+    private SwordAnimation playerSword;
     private GameObject swordArm;
 
 
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         gamePaused = false;
         swordCollider = transform.Find("ArmPivot/SwordCollider").gameObject;
+        playerSword = transform.Find("ArmPivot/Arm/Axe").GetComponent<SwordAnimation>();
         swordArm = transform.Find("ArmPivot/Arm").gameObject;
         swordCollider.SetActive(false);
     }
@@ -303,8 +305,10 @@ public class PlayerController : MonoBehaviour
     private IEnumerator InitPlayerAttackCoroutine() {
         rb.velocity = new Vector2(0, 0);
         isPlayerAttacking = true;
+        playerSword.SetAttack(isPlayerAttacking);
+        
         //Sacando a espada
-        yield return new WaitForSeconds(0.1f);
+        //yield return new WaitForSeconds(0.1f);
 
         //Aplicando dano
         swordCollider.SetActive(true);
@@ -312,10 +316,11 @@ public class PlayerController : MonoBehaviour
 
         //Deadframes espada e fim animação
         swordCollider.SetActive(false);
-        yield return new WaitForSeconds(0.3f);
+        //yield return new WaitForSeconds(0.1f);
 
         //yield return new WaitForSeconds(1.0f);
         isPlayerAttacking = false;
+        playerSword.SetAttack(isPlayerAttacking);
 
     }
 }
