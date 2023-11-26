@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathBarrier : MonoBehaviour
+public class PlayerSword : MonoBehaviour
 {
     // Start is called before the first frame update
-    private SpriteRenderer spriteRenderer;
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.enabled = false;
+        
     }
 
     // Update is called once per frame
@@ -19,10 +17,13 @@ public class DeathBarrier : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "Player") {
-            ResetScene.InstanciaResetScene.Reset();
+        if(collision.tag == "Enemy") {
+            IDamageable damageable = collision.GetComponent<IDamageable>();
+            Attack(damageable);
         }
     }
 
-    
+    private void Attack(IDamageable damageable) {
+        damageable.Kill();
+    }
 }

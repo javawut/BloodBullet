@@ -16,10 +16,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Checkpoint checkPoint;
     [SerializeField] private int coins = 0;
-    [SerializeField] private Transform weapon;
+    [SerializeField] private int playerCurrentHealth = 5;
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private float invencibilityTime = 1.0f;
+    [SerializeField] private bool gamePaused;
 
     private Rigidbody2D rb;
     private Animator animator;
+    private bool isPlayerHit = false;
+    private SpriteRenderer spriteRenderer;
+    private bool playerKilled = false;
+    private int playerFullHealth;
+    private GameObject swordCollider;
+    private bool isPlayerAttacking = false;
 
 
     [SerializeField] public static GameObject instanciaPlayerController;
@@ -39,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instanciaPlayerController = FindObjectOfType<PlayerController>().gameObject;
+        playerFullHealth = playerCurrentHealth;
     }
 
     // Start is called before the first frame update
@@ -46,22 +56,27 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-    }
-
-    private void FixedUpdate()
-    {
-        CharacterMoveHorizontal();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        gamePaused = false;
+        swordCollider = transform.Find("ArmPivot/SwordCollider").gameObject;
+        swordCollider.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsGroundedCheck();
-        GetSprint();
-        GetHorizontalVerticalMove();
-        CharacterMoveVertical();
-        //FlipSprite();
-        GetAnimations();
+        GetGamePaused();
+
+        if(!gamePaused) {
+            IsGroundedCheck();
+            GetHorizontalVerticalMove();
+            CharacterMoveHorizontal();
+            CharacterMoveVertical();
+            GetSprint();
+            PlayerAttack();
+            GetAnimations();
+            PlayerKilledState();
+        }
     }
 
     void GetHorizontalVerticalMove()
@@ -159,6 +174,8 @@ public class PlayerController : MonoBehaviour
 
         //Resetar a gravidade do player.
         rb.velocity = new Vector2(0, 0);
+
+        PlayerAddHealth(playerFullHealth);
     }
 
     public void RestartCoins()
@@ -171,6 +188,127 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         animator.SetBool("OnGround", isGrounded);
         animator.SetBool("Running", isRunning);
+        animator.SetBool("Paused", gamePaused);
+        animator.SetBool("Killed", playerKilled);
+        animator.SetBool("AttackSwordGround", isPlayerAttacking);
+    }
+
+    private void GetGamePaused() {
+        if(Time.timeScale > 0) {
+            gamePaused = false;
+        } else {
+            gamePaused = true;
+        }
+    }
+
+    public void PlayerDamage(int damage) {
+        StartCoroutine(PlayerDamageCoroutine(damage));
+    }
+
+    public bool IsPlayerHit() {
+        return isPlayerHit;
+    }
+
+    private IEnumerator PlayerDamageCoroutine(int damage) {
+        playerCurrentHealth -= damage;
+        healthBar.SetHealth(playerCurrentHealth);
+
+        if(!IsPlayerKilled()) {
+            isPlayerHit = true;
+            PlayerDamagedAnimation();
+            yield return new WaitForSeconds(invencibilityTime);
+            isPlayerHit = false;
+        } else {
+            KillPlayer();
+            yield return new WaitForSeconds(3.0f);
+            ResetScene.InstanciaResetScene.Reset();
+        }
+
+    }
+
+    private void PlayerDamagedAnimation() {
+        StartCoroutine(PlayerDamagedCoroutine());
+    }
+
+    private IEnumerator PlayerDamagedCoroutine() {
+        bool isEnabled = true;
+        while(isPlayerHit && !playerKilled) {
+            isEnabled = !isEnabled;
+            spriteRenderer.enabled = isEnabled;
+            yield return new WaitForSeconds(0.02f);
+        }
+        spriteRenderer.enabled = true;
+
+    }
+
+    private bool IsPlayerKilled() {
+        return playerCurrentHealth <= 0;
+    }
+
+    private void KillPlayer() {
+        playerKilled = true;
+        isPlayerHit = true;
+        playerCurrentHealth = 0;
+    }
+
+    private void PlayerKilledState() {
+        if(playerKilled) {
+            rb.velocity = new Vector2(0, 0);
+        }
+    }
+
+    public void RestartPlayer() {
+        playerKilled = false;
+        playerCurrentHealth = playerFullHealth;
+        isPlayerHit = false;
+        healthBar.SetHealth(playerCurrentHealth);
+    }
+
+    public void PlayerAddHealth(int amount) {
+        if(playerCurrentHealth + amount > playerFullHealth) {
+            playerCurrentHealth = playerFullHealth;
+        } else {
+            playerCurrentHealth += amount;
+        }
+
+        healthBar.SetHealth(playerCurrentHealth);
+    }
+
+    public int GetPlayerMaxHealth() {
+        return playerFullHealth;
+    }
+
+    private void PlayerAttack() {
+        if(!isPlayerAttacking) {
+            if(Input.GetMouseButtonDown(0) && isGrounded) {
+                InitPlayerAttack();
+            }
+        } else {
+            rb.velocity = new Vector2(0, 0);
+        }
+    }
+
+    private void InitPlayerAttack() {
+        StartCoroutine(InitPlayerAttackCoroutine());
+    }
+
+    private IEnumerator InitPlayerAttackCoroutine() {
+        rb.velocity = new Vector2(0, 0);
+        isPlayerAttacking = true;
+        //Sacando a espada
+        yield return new WaitForSeconds(0.1f);
+
+        //Aplicando dano
+        swordCollider.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+
+        //Deadframes espada e fim animação
+        swordCollider.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
+
+        //yield return new WaitForSeconds(1.0f);
+        isPlayerAttacking = false;
+
     }
 }
 

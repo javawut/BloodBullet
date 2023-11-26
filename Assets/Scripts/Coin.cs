@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +17,16 @@ public class Coin : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "Player") {
             AddCoinPlayer();
         }
     }
 
-    void AddCoinPlayer()
-    {
+    void AddCoinPlayer() {
         PlayerController.InstanciaPlayerController.AddCoin();
         gameObject.SetActive(false);
     }
+
+
 }

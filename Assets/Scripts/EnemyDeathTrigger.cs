@@ -17,16 +17,13 @@ public class EnemyDeathTrigger : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "Player" && !PlayerController.InstanciaPlayerController.IsPlayerHit()) {
             KillEnemy();
         }
     }
 
-    private void KillEnemy()
-    {
+    private void KillEnemy() {
         enemy.Kill();
         enemy.gameObject.SetActive(false);
     }
