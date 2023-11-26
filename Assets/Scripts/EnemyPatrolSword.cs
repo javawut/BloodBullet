@@ -21,13 +21,14 @@ public class EnemyPatrolSword: Enemy
     private bool isFacingRightStart;
     private BoxCollider2D boxCollider;
     private bool isAttacking = false;
-    private float attackRange = 1.8f;
+    private float attackRange = 1.7f;
     private float playerDistance;
     private Vector2 playerPosition;
     private bool isCooldownAttack = false;
 
     private PlayerController player;
     private GameObject swordCollider;
+    
     private float enemyFlippedPrevious;
     private float previousMoveSpeed;
     private Vector3 initialScale;
@@ -189,7 +190,7 @@ public class EnemyPatrolSword: Enemy
     private IEnumerator KillCoroutine() {
 
         DisableEnemy();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.7f);
         gameObject.SetActive(false);
     }
 

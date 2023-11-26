@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6148884, y: 0.0068717003}
+  m_Offset: {x: -0.72178686, y: -0.2611271}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7317633, y: 1.810852}
+  m_Size: {x: 0.84277177, y: 1.8954828}
   m_EdgeRadius: 0
 --- !u!114 &3712658164165065013
 MonoBehaviour:
@@ -300,9 +300,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7225122376710463470}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.5, y: -0.14, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7225122375588882696}
@@ -323,18 +323,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024091095, y: 0.013924718}
+  m_Offset: {x: 0.052301973, y: -0.254074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 1.23}
-    newSize: {x: 0.42, y: 0.49}
+    oldSize: {x: 2.5, y: 2.5}
+    newSize: {x: 2.5, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62261695, y: 1.2024238}
+  m_Size: {x: 0.73545843, y: 1.935894}
   m_EdgeRadius: 0
 --- !u!50 &7225122376710463464
 Rigidbody2D:
@@ -367,7 +367,7 @@ Animator:
   m_GameObject: {fileID: 7225122376710463470}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5fcd3767a8f2bf74fa32d15835f6f123, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5bf6dcdb49dbd240806e4610721c272, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -377,6 +377,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &7225122376710463461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -416,14 +417,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -990009115
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 239129019, guid: a6a072cb69a868340b50f206bfe1988f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62770b5826ddefc4eb5a228180f01aeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.42, y: 0.49}
+  m_Size: {x: 2.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -448,4 +449,3 @@ MonoBehaviour:
   pointPositions: []
   enemyBodyDamage: 1
   enemySwordDamage: 2
-  enemyFlippedPrevious: 0

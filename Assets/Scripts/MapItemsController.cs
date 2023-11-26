@@ -5,7 +5,6 @@ using UnityEngine;
 public class MapItemsController : MonoBehaviour
 {
 
-    [SerializeField] private GameObject coinsObj;
     [SerializeField] private GameObject healthRegensObj;
     private GameObject[] coinsArray;
     private GameObject[] healthRegensArray;
@@ -30,7 +29,6 @@ public class MapItemsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetCoins();
         GetHealthRegens();
     }
 
@@ -40,24 +38,8 @@ public class MapItemsController : MonoBehaviour
         
     }
 
-    private void GetCoins() {
-        coinsChildrenCount = coinsObj.transform.childCount;
-        coinsArray = new GameObject[coinsChildrenCount];
-
-        for(int i=0; i < coinsChildrenCount;i++) {
-            coinsArray[i] = coinsObj.transform.GetChild(i).gameObject;
-        }
-    }
-
-    public void RestartCoins() {
-        for(int i = 0;i < coinsChildrenCount;i++) {
-            coinsArray[i].SetActive(true);
-        }
-    }
-
     public void RestartItems()
     {
-        RestartCoins();
         RestartHealthRegens();
     }
 

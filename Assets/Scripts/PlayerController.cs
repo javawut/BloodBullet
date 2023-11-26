@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private float invencibilityTime = 1.0f;
     [SerializeField] private bool gamePaused;
+    [SerializeField] private float playerAttackSlowMultiplier = 0.6f;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private int playerFullHealth;
     private GameObject swordCollider;
     private bool isPlayerAttacking = false;
+    private GameObject swordArm;
 
 
     [SerializeField] public static GameObject instanciaPlayerController;
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         gamePaused = false;
         swordCollider = transform.Find("ArmPivot/SwordCollider").gameObject;
+        swordArm = transform.Find("ArmPivot/Arm").gameObject;
         swordCollider.SetActive(false);
     }
 
@@ -235,9 +238,11 @@ public class PlayerController : MonoBehaviour
         while(isPlayerHit && !playerKilled) {
             isEnabled = !isEnabled;
             spriteRenderer.enabled = isEnabled;
+            swordArm.SetActive(isEnabled);
             yield return new WaitForSeconds(0.02f);
         }
         spriteRenderer.enabled = true;
+        swordArm.SetActive(true);
 
     }
 
@@ -249,6 +254,7 @@ public class PlayerController : MonoBehaviour
         playerKilled = true;
         isPlayerHit = true;
         playerCurrentHealth = 0;
+        swordArm.SetActive(false);
     }
 
     private void PlayerKilledState() {
@@ -261,6 +267,7 @@ public class PlayerController : MonoBehaviour
         playerKilled = false;
         playerCurrentHealth = playerFullHealth;
         isPlayerHit = false;
+        swordArm.SetActive(true);
         healthBar.SetHealth(playerCurrentHealth);
     }
 
@@ -284,7 +291,8 @@ public class PlayerController : MonoBehaviour
                 InitPlayerAttack();
             }
         } else {
-            rb.velocity = new Vector2(0, 0);
+            //Player toma slow enquanto está atacando
+            rb.velocity = new Vector2(rb.velocity.x * playerAttackSlowMultiplier, 0);
         }
     }
 
