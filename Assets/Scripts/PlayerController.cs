@@ -216,8 +216,19 @@ public class PlayerController : MonoBehaviour
         return isPlayerHit;
     }
 
+    private void NormalizePlayerDamage()
+    {
+        if(playerCurrentHealth <= 0)
+        {
+            playerCurrentHealth = 0;
+        }
+    }
+
     private IEnumerator PlayerDamageCoroutine(int damage) {
         playerCurrentHealth -= damage;
+        NormalizePlayerDamage();
+
+
         healthBar.SetHealth(playerCurrentHealth);
 
         if(!IsPlayerKilled()) {
