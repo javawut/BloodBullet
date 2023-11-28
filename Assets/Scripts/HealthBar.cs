@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
     private Slider slider;
     [SerializeField] private Sprite[] barSprites;
     [SerializeField] private Image fill;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,6 @@ public class HealthBar : MonoBehaviour
 
     public void ChangeBarSprite(int playerHealth)
     {
-
+        spriteRenderer.sprite = barSprites[playerHealth];
     }
 }

@@ -1985,11 +1985,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 7f49e894be4a46f4caf1a81dfc8a60b5, type: 3}
+  - {fileID: 21300000, guid: 5a9c3f4f08a4636488774de5b3ee0b6f, type: 3}
+  - {fileID: 21300000, guid: 70353ae7ec993d541ab1bc1f852529a3, type: 3}
+  - {fileID: 21300000, guid: 54ed17fb1da47b148ae6cac3678b53c5, type: 3}
+  - {fileID: 21300000, guid: 4e92abfb6878b364692f345c9cafb475, type: 3}
+  - {fileID: 21300000, guid: 87d753155055de241b4b1c8272786e05, type: 3}
+  - {fileID: 21300000, guid: 3ec01d3d8a452de40a9da8dc81af4b49, type: 3}
+  - {fileID: 21300000, guid: f1199930ef45f3943920d2d07da322f3, type: 3}
+  - {fileID: 21300000, guid: 7d774d849a99d4b47b2f7fdaae08492a, type: 3}
+  - {fileID: 21300000, guid: 57605e6d1bf3d734ca97666c97637813, type: 3}
   fill: {fileID: 2455532841161758217}
 --- !u!114 &2455532839464668642
 MonoBehaviour:
