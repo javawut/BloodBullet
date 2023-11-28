@@ -8,10 +8,13 @@ public class HealthBar : MonoBehaviour
     private Slider slider;
     [SerializeField] private Sprite[] barSprites;
     [SerializeField] private Image fill;
-    private SpriteRenderer spriteRenderer;
+    private Image spriteBar;
+    private float playerMaxHealth;
     // Start is called before the first frame update
     void Start()
     {
+        spriteBar = transform.Find("Bar/Fill").gameObject.GetComponent<Image>();
+        playerMaxHealth = PlayerController.InstanciaPlayerController.GetPlayerMaxHealth();
         InitHealthBar();
     }
 
@@ -25,21 +28,17 @@ public class HealthBar : MonoBehaviour
     {
         slider = GetComponent<Slider>();
 
-        int maxValue = PlayerController.InstanciaPlayerController.GetPlayerMaxHealth();
         slider.minValue = 0;
-        slider.maxValue = maxValue;
+        slider.maxValue = playerMaxHealth;
 
-        SetHealth(maxValue);
+        SetHealth((int) playerMaxHealth);
     }
 
     public void SetHealth(int health)
     {
-        slider.value = health;
+        float indexFloat = (health / playerMaxHealth) * 10f;
+        int index = (int)(indexFloat);
+        spriteBar.sprite = barSprites[index];
 
-    }
-
-    public void ChangeBarSprite(int playerHealth)
-    {
-        spriteRenderer.sprite = barSprites[playerHealth];
     }
 }
