@@ -74,6 +74,4 @@ public class MenuPrincipalManager : MonoBehaviour
         botaoSair.onClick.AddListener(OnButtonSairClick);
         botaoVoltar.onClick.AddListener(OnButtonVoltarClick);
     }
-
-
 }
