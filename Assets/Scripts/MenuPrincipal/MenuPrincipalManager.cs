@@ -47,7 +47,7 @@ public class MenuPrincipalManager : MonoBehaviour
     }
 
     private void CarregarCena() {
-        SceneManager.LoadScene("Scenes/IntroStage", LoadSceneMode.Single);
+        SceneManager.LoadScene("Scenes/fase01", LoadSceneMode.Single);
     }
 
     private void CarregarCreditos()
@@ -74,6 +74,4 @@ public class MenuPrincipalManager : MonoBehaviour
         botaoSair.onClick.AddListener(OnButtonSairClick);
         botaoVoltar.onClick.AddListener(OnButtonVoltarClick);
     }
-
-
 }
