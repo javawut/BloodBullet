@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private SwordAnimation playerSword;
     private SpriteRenderer swordArm;
     private SpriteRenderer swordAxe;
+    private bool isRunningCooldown = false;
 
 
     [SerializeField] public static GameObject instanciaPlayerController;
@@ -311,7 +312,7 @@ public class PlayerController : MonoBehaviour
             }
         } else {
             //Player não pode correr enquanto ataca, então agora ele irá apenas andar
-            if(isRunning) {
+            if(isRunningCooldown) {
                 isRunning = false;
                 rb.velocity = new Vector2(horizontalMove * walkingSpeed, 0);
             }
@@ -326,6 +327,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator InitPlayerAttackCoroutine() {
         rb.velocity = new Vector2(0, 0);
         isPlayerAttacking = true;
+        isRunningCooldown = true;
         playerSword.SetAttack(isPlayerAttacking);
         
         //Sacando a espada
@@ -337,6 +339,7 @@ public class PlayerController : MonoBehaviour
 
         //Deadframes espada e fim animação
         swordCollider.SetActive(false);
+        isRunningCooldown = false;
         //yield return new WaitForSeconds(0.1f);
 
         yield return new WaitForSeconds(1.0f);
